@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.4"
+notifications:
+  email:
+    recipients:
+      - eric.brauer@senecacollege.ca
+  on_success: always
+  on_failure: never
+
+script: 
+  - python3 ./CheckLab7.py -v

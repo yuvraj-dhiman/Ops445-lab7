@@ -3,7 +3,7 @@ This will download Lab 7 locally, allowing you to work on your scripts and uploa
 
 1. Clone your lab repository into your ~/ops435/lab7 directory using SSH:
 ```bash
-git clone git@github.com:ops435/lab7-yourgithubusername.git ~/ops435/lab7/
+git clone git@github.com:ops435/lab-7-yourgithubusername.git ~/ops435/lab7/
 ```
 2. Copy your backed-up work into your new GitHub-linked directory:
 ```bash

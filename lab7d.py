@@ -33,8 +33,8 @@ class Time:
     def time_to_sec(self):
         '''convert a time object to a single integer representing the 
         number of seconds from mid-night'''
-       minutes = self.hour * 60 + self.minute
-       seconds = minutes * 60 + self.second
+        minutes = self.hour * 60 + self.minute
+        seconds = minutes * 60 + self.second
         return seconds
 
     def valid_time(self):

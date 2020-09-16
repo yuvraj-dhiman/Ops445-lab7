@@ -58,7 +58,7 @@ class lab7a(unittest.TestCase):
         error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
         self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
     
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 1] - [Part 1] - Test for Correct Script ID in ./lab7a1.py"""
         lab_file = open('./lab7a1.py')
@@ -132,7 +132,7 @@ class lab7b(unittest.TestCase):
         error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
         self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
     
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 1] - [Part 2] - Test for Correct Script ID in ./lab7b.py"""
         lab_file = open('./lab7b.py')
@@ -211,7 +211,7 @@ class lab7c(unittest.TestCase):
         error_output = 'Your lab7c1.py script exited with a error(HINT: make sure you copied the script exactly!)'
         self.assertEqual(return_code, 0, msg=error_output)
 
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 1] - [Part 3] - Test for Correct Script ID in ./lab7c.py"""
         lab_file = open('./lab7c.py')
@@ -274,7 +274,7 @@ class lab7d(unittest.TestCase):
         error_output = 'file lab7d.py cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab7d.py'), msg=error_output)
 
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 2] - [Part 1] - Test for Correct Script ID in ./lab7d.py"""
         lab_file = open('./lab7d.py')
@@ -405,7 +405,7 @@ class lab7e(unittest.TestCase):
         error_output = 'file lab7e.py cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab7e.py'), msg=error_output)
     
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 2] - [Part 2] - Test for Correct Script ID in ./lab7e.py"""
         lab_file = open('./lab7e.py')
@@ -474,7 +474,7 @@ class lab7f(unittest.TestCase):
         error_output = 'file lab7f.py cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab7f.py'), msg=error_output)
 
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 2] - [Part 3] - Test for Correct Script ID in ./lab7f.py"""
         lab_file = open('./lab7f.py')
@@ -531,7 +531,7 @@ class lab7i(unittest.TestCase):
         error_output = 'file lab7i.py cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab7i.py'), msg=error_output)
 
-    @unittest.skipIf(os.getlogin() == 'travis', "skipping userid check.")
+    @unittest.skip( "skipping userid check.")
     def test_a1_author_id(self):
         """[Lab 7] - [Investigation 3] - [Part 3] - Test for Correct Script ID in ./lab7i.py"""
         lab_file = open('./lab7i.py')

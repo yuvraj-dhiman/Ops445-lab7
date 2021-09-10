@@ -1,13 +1,13 @@
 # Setup
 This will download Lab 7 locally, allowing you to work on your scripts and upload (push) them back up to GitHub.
 
-1. Clone your lab repository into your ~/ops435/lab7 directory using SSH:
+1. Clone your lab repository into your ~/ops445/lab7 directory using SSH:
 ```bash
-git clone git@github.com:ops435/lab-7-yourgithubusername.git ~/ops435/lab7/
+git clone git@github.com:ops445/lab-7-yourgithubusername.git ~/ops445/lab7/
 ```
 2. Copy your backed-up work into your new GitHub-linked directory:
 ```bash
-cp ~/old_ops435/lab7/* ~/ops435/lab7/
+cp ~/old_ops445/lab7/* ~/ops445/lab7/
 ```
 
 # Submission
@@ -15,7 +15,7 @@ cp ~/old_ops435/lab7/* ~/ops435/lab7/
 
 2. Paste the output of **running your scripts for this lab** into *laboutput.txt*:
 ```bash
-vi ~/ops435/lab7/laboutput.txt
+vi ~/ops445/lab7/laboutput.txt
 ```
 
 3. Commit and push (upload) your lab work:

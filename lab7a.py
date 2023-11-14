@@ -12,7 +12,7 @@ class Time:
 
 def format_time(t):
     """Return time object (t) as a formatted string"""
-    return f'{t.hour:02}:{t.minute:02}:{t.second:02}'
+    return f'{t.hour:02d}:{t.minute:02d}:{t.second:02d}'
 
 def sum_times(t1, t2):
     """Add two time objests and return the sum."""

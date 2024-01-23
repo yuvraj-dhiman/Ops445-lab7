@@ -43,7 +43,7 @@ class lab7a(unittest.TestCase):
     def test_a(self):
         """[Lab 7] - [Investigation 1] - [Part 1] - Test for errors running: ./lab7a1.py"""
         # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab7a1.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([sys.executable, './lab7a1.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if process returns a no zero exit status
         return_code = p.wait()
@@ -174,7 +174,7 @@ class lab7c(unittest.TestCase):
     def test_a(self):
         """[Lab 7] - [Investigation 1] - [Part 3] - Test for errors running: ./lab7c1.py"""
         # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab7c1.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([sys.executable, './lab7c1.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if process returns a no zero exit status
         return_code = p.wait()
@@ -444,7 +444,7 @@ class lab7i(unittest.TestCase):
     def test_b1_run(self):
         """[Lab 7] - [Investigation 3] - [Part 3] - Global scope - Test for successful execution: ./lab7i.py"""
         # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab7i.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([sys.executable, './lab7i.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if process returns a no zero exit status
         return_code = p.wait()
@@ -454,7 +454,7 @@ class lab7i(unittest.TestCase):
     def test_b2_run(self):
         """[Lab 7] - [Investigation 3] - [Part 3] - Global scope - Test for correct output: ./lab7i.py"""
         # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab7i.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([sys.executable, './lab7i.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if stdout from the process does not match expected output
         return_code = p.wait()
@@ -505,13 +505,14 @@ def CheckForUpdates():
         print('Skipping updates...')
         return
 
+
 def displayReportHeader():
-    report_heading = 'OPS435 Lab Report - System Information for running '+sys.argv[0]
+    report_heading = 'OPS445 Lab Report - System Information for running '+sys.argv[0]
     print(report_heading)
     print(len(report_heading) * '=')
-    print('    User login name:', os.getlogin())
+    import getpass
+    print('    User login name:', getpass.getuser())
     print('    Linux system name:', socket.gethostname())
-    print('    Linux system version:', os.popen('cat /etc/redhat-release').read().strip())
     print('    Python executable:',sys.executable)
     print('    Python version: ',sys.version_info.major,sys.version_info.minor,sys.version_info.micro,sep='')
     print('    OS Platform:',sys.platform)
